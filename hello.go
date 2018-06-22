@@ -52,7 +52,7 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		hostname, _ := os.Hostname()
 		log.Println("Received request from", r.RemoteAddr)
-		fmt.Fprintf(w, "Received request for URL: %s,\nMy hostname is %q\nV4",
+		fmt.Fprintf(w, "Received request for URL: %s,\nMy hostname is %q\nV5",
 			r.RequestURI, hostname)
 	})
 	fmt.Println(http.ListenAndServe(":5050", nil))
